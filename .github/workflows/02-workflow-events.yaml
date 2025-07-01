@@ -1,0 +1,16 @@
+# # This workflow demonstrates the use of workflow events in GitHub Actions.
+name: 02 - Workflow Events
+
+# Trigger: Run this workflow on every push to any branch
+on:
+  push: # Trigger on pushes
+  pull_request: # Trigger on pull requests
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  # Job 1: Display the event name
+  echo:
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Show the trigger
+        run: echo "Event name ${{ github.event_name }}" # Display the event name that triggered the workflow

@@ -1,0 +1,24 @@
+# This workflow demonstrates basic GitHub Actions building blocks
+name: 01 - Building Blocks
+
+# Trigger: Allows manual triggering of the workflow
+on: workflow_dispatch
+
+jobs:
+  # Job 1: Simple hello message
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello, World!"  # Basic echo command
+
+  # Job 2: Multiple steps with explicit success
+  echo-goodbye: 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Successful step 
+        run: |
+          echo "I will succeed"
+          exit 0  # Explicit success exit code (redundant but educational)
+      - name: Say goodbye
+        run: echo "Goodbye!"  # Final step
