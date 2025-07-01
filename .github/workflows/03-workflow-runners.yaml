@@ -1,0 +1,15 @@
+name: 03 - Worflow Runners
+
+# Trigger: Allows push events to trigger the workflow
+on: push
+
+jobs:
+  # Job 1: Show OS information
+  ubuntu-echo:
+    runs-on: ubuntu-latest # Default runner
+    steps:
+      - name: Show OS
+        run: |
+          echo "This job is running on an Ubuntu runner"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner OS: ${{ runner.os }}"
