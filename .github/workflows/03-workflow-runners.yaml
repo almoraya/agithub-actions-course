@@ -1,4 +1,4 @@
-name: 03 - Worflow Runners
+name: 03 - Workflow Runners
 
 # Trigger: Allows the workflow to be manually triggered
 on: workflow_dispatch
