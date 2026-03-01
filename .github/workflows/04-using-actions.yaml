@@ -14,4 +14,4 @@ jobs:
           echo "Current directory structure:"
           ls -la
           echo "React app structure (if applicable):"
-          ls -la react-app/ || echo "No react-app folder found"
+          ls -la 04-using-actions/react-app/ || echo "No react-app folder found"
