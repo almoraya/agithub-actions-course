@@ -9,7 +9,7 @@ jobs:
       - name: Show OS
         run: |
           echo "Env var: $RUNNER_OS"
-          echo "This job is running on a Ubuntu runner"
+          echo "This job is running on a ${{ runner.os }} runner"
           echo "Full info: $RUNNER_NAME ($RUNNER_ARCH)"
 
   windows-echo:
@@ -18,7 +18,7 @@ jobs:
       - name: Show OS
         run: |
           echo "Env var: $RUNNER_OS"
-          echo "This job is running on a Windows runner"
+          echo "This job is running on a ${{ runner.os }} runner"
           echo "Full info: $RUNNER_NAME ($RUNNER_ARCH)"
   mac-echo:
     runs-on: macos-latest
