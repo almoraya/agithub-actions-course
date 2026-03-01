@@ -1,0 +1,17 @@
+name: 04-using-actions
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Printing Folders
+        run: |
+          echo "Current directory structure:"
+          ls -la
+          echo "React app structure (if applicable):"
+          ls -la react-app/ || echo "No react-app folder found"
