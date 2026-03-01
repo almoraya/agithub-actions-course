@@ -17,8 +17,8 @@ jobs:
           echo "Current directory: $(pwd)"
           echo "React app contents:"
           ls -la
-          echo "Root directory contents:"
-          ls -la ../..
+          echo "Workflows contents:"
+          ls -la ../../.github/workflows/ || echo "Workflows folder not found"
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
