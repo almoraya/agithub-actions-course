@@ -1,6 +1,7 @@
 # GitHub Actions Course !!!
 
 A hands-on learning repository with practical examples and notes for mastering GitHub Actions.
+Preparing for a production migration.
 
 ## 📚 Workflows
 
