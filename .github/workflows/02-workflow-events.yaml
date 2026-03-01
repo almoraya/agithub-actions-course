@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '52 16 * * *' # In Germany it will at 17:52 every day
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
