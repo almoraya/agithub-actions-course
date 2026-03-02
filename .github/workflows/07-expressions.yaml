@@ -2,7 +2,6 @@ name: 07-expressions
 run-name: 07-expressions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       debug:
