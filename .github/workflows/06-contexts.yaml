@@ -5,9 +5,16 @@ on: [
   workflow_dispatch
 ]
 
+env:
+  MY_WORKFLOW_VAR: "workflow"
+  MY_OVERWRITTEN_VAR: "workflow"
+
 jobs:
   echo-data:
     runs-on: ubuntu-latest
+    env:
+      MY_JOB_VAR: "job"
+      MY_OVERWRITTEN_VAR: "job"
     steps:
       - name: Display Information
         run: |
@@ -21,3 +28,20 @@ jobs:
       - name: Retrieve Variable
         run: |
           echo "Value of MY_VAR is: ${{ vars.MY_VAR }}"
+
+      - name: Print With Single Inner Env Variables
+        env: 
+          MY_OVERWRITTEN_VAR: "step overwrite env"
+          MY_JOB_VAR: "step job env"
+        run: |
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
+          echo "Job env: ${{ env.MY_JOB_VAR }}"
+
+      - name: Print Without Inner Env Variables
+        env: 
+          MY_WORKFLOW_VAR: "step workflow env"
+        run: |
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
+          echo "Job env: ${{ env.MY_JOB_VAR }}"
