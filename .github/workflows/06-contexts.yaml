@@ -1,8 +1,13 @@
 name: 06-contexts
+run-name: 06-contexts | DEBUG - ${{ inputs.debug }}
 
-on: [
-  workflow_dispatch
-]
+on:
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: "Enable debug mode"
+        type: boolean
+        default: false
 
 env:
   MY_WORKFLOW_VAR: "workflow"
