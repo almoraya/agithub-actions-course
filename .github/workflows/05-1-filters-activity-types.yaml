@@ -10,4 +10,10 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running whenever a PR is opened or synchronized and base branch is main"
+      - name: Show specific PR event
+        run: |
+          if [ "${{ github.event.action }}" == "opened" ]; then
+            echo "🚀 Running because a NEW PR was opened against main!"
+          else
+            echo "📤 Running because new commits were pushed (synchronize) to an existing PR against main!"
+          fi
