@@ -8,6 +8,7 @@ on: [
 env:
   MY_WORKFLOW_VAR: "workflow"
   MY_OVERWRITTEN_VAR: "workflow"
+  MY_GLOBAL_VAR: "global"
 
 jobs:
   echo-data:
@@ -45,3 +46,4 @@ jobs:
           echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
           echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
           echo "Job env: ${{ env.MY_JOB_VAR }}"
+          echo "Global env: ${{ env.MY_GLOBAL_VAR }}"
