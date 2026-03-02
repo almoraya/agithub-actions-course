@@ -20,4 +20,4 @@ jobs:
 
       - name: Retrieve Variable
         run: |
-          echo "My Variable is: ${{ env.MY_VARIABLE }}"
+          echo "Value of MY_VAR is: ${{ env.MY_VAR }}"
