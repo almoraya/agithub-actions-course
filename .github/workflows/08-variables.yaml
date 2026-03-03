@@ -38,4 +38,4 @@ jobs:
     steps:
       - name: Print Undefined Variable with Default
         run: |
-          echo "Undefined var with default: $UNDEFINED_VAR_WITH_DEFAULT"
+          echo "Undefined var: $UNDEFINED_VAR_WITH_DEFAULT"
