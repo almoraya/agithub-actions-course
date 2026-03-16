@@ -16,7 +16,7 @@ jobs:
       - name: Print PR labels
         run: |
           cat << EOF
-          PR labels are: ${{ toJson(github.event.pull_request.labels) }}
+          ${{ toJSON(github.event.pull_request.labels) }}
           EOF
           
       - name: Bug Step
